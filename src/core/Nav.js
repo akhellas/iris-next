@@ -11,7 +11,8 @@ class Nav extends Component {
               <i className='fa fa-bars'></i>
             </span>
           </a>
-          <NavLink className='navbar-item' to='/'>IRIS</NavLink>
+          <NavLink className='navbar-item' activeClassName='is-active' to='/' exact={true}>IRIS</NavLink>
+          <NavLink className='navbar-item' activeClassName='is-active' to='/about' exact={true}>About</NavLink>
         </div>
       </nav>
     )

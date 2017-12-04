@@ -1,4 +1,6 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import './App.css'
 
@@ -12,4 +14,4 @@ const App = () => (
   </div>
 )
 
-export default App
+export default withRouter(connect()(App))
