@@ -1,10 +1,10 @@
 ## IRIS Document Creation/Editing Events
 
-- [Document Created] (#document-created)
-- [Document Details Updated] (#document-details-updated)
-- [Document Reference Added] (#document-reference-added)
+- [Document Created](#documentcreated)
+- [Document Details Updated](#documentdetailsupdated)
+- [Document Reference Added](#documentreferenceadded)
 
-### Document Created
+### DocumentCreated
 
 ```json
 {
@@ -24,7 +24,7 @@
 }
 ```
 
-### Document Details Updated
+### DocumentDetailsUpdated
 
 ```json
 {
