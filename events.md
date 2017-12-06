@@ -52,7 +52,30 @@
 }
 ```
 
-### Document Reference Added
+### DocumentReferenceAdded
+
+```json
+{
+    "id": "guid",
+    "type": "documentReferenceAdded",
+    "timestamp": "datetime",
+    "user": {
+        "id": "user_id",
+        "department": "department_id",
+        "title": "title_id",
+        "name": "fullname"
+    },
+    "document": {
+        "id": "document_id",
+        "version": 2
+    },
+    "reference": {
+        "id": "",
+        "type": "",
+        "name": ""
+    }
+}
+```
 
 ### DocumentReferenceRemoved
 
