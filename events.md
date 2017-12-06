@@ -1,8 +1,8 @@
 ## IRIS Document Creation/Editing Events
 
-- [DocumentCreated] (#documentcreated)
-- [DocumentDetailsUpdated] (#documentdetailsupdated)
-- [DocumentReferenceAdded] (#documentreferenceadded)
+- [Document Created] (#documentcreated)
+- [Document DetailsUpdated] (#documentdetailsupdated)
+- [Document ReferenceAdded] (#documentreferenceadded)
 
 ### DocumentCreated
 
