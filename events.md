@@ -4,7 +4,7 @@
 - [Document DetailsUpdated] (#documentdetailsupdated)
 - [Document ReferenceAdded] (#documentreferenceadded)
 
-### DocumentCreated
+## DocumentCreated
 
 ```json
 {
