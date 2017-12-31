@@ -1,14 +1,17 @@
-import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-class Documents extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Documents</h2>
-      </div>
-    )
-  }
-}
+import DocumentsDashboard from './DocumentsDashboard'
+import CreateDocument from './CreateDocument'
+
+const Documents = () => (
+  <div>
+    <h2>Documents</h2>
+    <Switch>
+      <Route exact path="/documents" component={DocumentsDashboard} />
+      <Route exact path="/documents/new" component={CreateDocument} />
+    </Switch>
+  </div>
+)
 
 export default Documents

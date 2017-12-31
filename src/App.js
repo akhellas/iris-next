@@ -2,15 +2,23 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import './App.css'
-
 import Nav from './core/Nav'
+import Sidenav from './core/Sidenav'
 import Main from './core/Main'
+import Footer from './core/Footer'
 
 const App = () => (
-  <div>
+  <div className="container-fluid is-marginless App">
     <Nav />
-    <Main />
+    <div className="columns is-marginless AppColumns">
+      <div className="column is-narrow Sidenav">
+        <Sidenav />
+      </div>
+      <div className="column">
+        <Main />
+      </div>
+    </div>
+    <Footer />
   </div>
 )
 
