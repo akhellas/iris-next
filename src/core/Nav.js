@@ -6,22 +6,25 @@ class Nav extends Component {
     return (
       <nav className="navbar is-link is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item">
-            <span className="icon">
-              <i className="fa fa-bars" />
-            </span>
-          </a>
           <NavLink
             className="navbar-item"
             activeClassName="is-active"
             to="/"
             exact={true}>
+            <span className="icon">
+              <i className="fa fa-tint" />
+            </span>
             IRIS
           </NavLink>
+          <button className="button navbar-burger is-link">
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
-        <div className="navbar-menu is-active">
+        <div className="navbar-menu">
+          <div className="navbar-item is-expanded" />
           <div className="navbar-start">
-            <div className="navbar-item is-expanded" />
             <NavLink
               className="navbar-item"
               activeClassName="is-active"
@@ -40,8 +43,8 @@ class Nav extends Component {
               to="/issues">
               Issues
             </NavLink>
-            <div className="navbar-item is-expanded" />
           </div>
+          <div className="navbar-item is-expanded" />
           <div className="navbar-end">
             <NavLink
               className="navbar-item"
