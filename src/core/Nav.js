@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 class Nav extends Component {
   render() {
     return (
-      <nav className="navbar is-link is-fixed-top">
+      <nav className="navbar is-link is-fixed-top Nav">
         <div className="navbar-brand">
           <NavLink
             className="navbar-item"

@@ -6,6 +6,7 @@
 $primary: #282c34
 $dark: #14161a
 
+$header-height: 45px
 $footer-height: 25px
 
 @import '../node_modules/bulma/sass/utilities/derived-variables'
@@ -15,6 +16,9 @@ $footer-height: 25px
 html
     height: 100%
     overflow: hidden
+
+.has-navbar-fixed-top
+    padding-top: $header-height !important
 
 .has-navbar-fixed-bottom
     padding-bottom: $footer-height !important
@@ -35,6 +39,14 @@ body
     min-width: 150px !important
     background-color: #e0e0e0
     height: 100%
+
+.Nav
+    min-height: $header-height
+    max-height: $header-height 
+
+.navbar-brand
+    min-height: $header-height
+    max-height: $header-height 
 
 .Footer
     min-height: $footer-height
