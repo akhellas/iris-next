@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = () => (
-  <div>
+  <div className="is-fullheight">
     <h2>About</h2>
   </div>
 )

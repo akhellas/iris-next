@@ -28,13 +28,13 @@ class App extends React.Component {
   render() {
     const feature = this.state.feature
     return (
-      <div className="container-fluid is-marginless App">
+      <div className="container-fluid is-fullheight">
         <Nav />
-        <div className="columns is-marginless AppColumns">
+        <div className="columns is-marginless is-fullheight">
           <div className="column is-narrow Sidenav">
             <Sidenav feature={feature} />
           </div>
-          <div className="column">
+          <div className="column is-paddingless">
             <Main />
           </div>
         </div>

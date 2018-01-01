@@ -17,23 +17,25 @@ html
     height: 100%
     overflow: hidden
 
-.has-navbar-fixed-top
-    padding-top: $header-height !important
-
-.has-navbar-fixed-bottom
-    padding-bottom: $footer-height !important
-
 body
     height: 100%
 
 #root
     height: 100%
 
-.App
-    height: 100%
+.has-navbar-fixed-top
+    padding-top: $header-height !important
 
-.AppColumns
-    height: 100%
+.has-navbar-fixed-bottom
+    padding-bottom: $footer-height !important
+
+.navbar-brand
+    min-height: $header-height
+    max-height: $header-height 
+
+.is-fullheight
+    min-height: 100% !important
+    height: 100% 
 
 .Sidenav
     min-width: 150px !important
@@ -41,10 +43,6 @@ body
     height: 100%
 
 .Nav
-    min-height: $header-height
-    max-height: $header-height 
-
-.navbar-brand
     min-height: $header-height
     max-height: $header-height 
 

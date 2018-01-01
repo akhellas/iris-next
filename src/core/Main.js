@@ -3,16 +3,18 @@ import { Switch, Route } from 'react-router-dom'
 
 import Dashboard from './Dashboard'
 import About from './About'
+import NotFound from './NotFound'
 import Documents from '../documents/Documents'
 import Tasks from '../tasks/Tasks'
 
 const Main = () => (
-  <main>
+  <main className="is-fullheight">
     <Switch>
       <Route exact path="/" component={Dashboard} />
-      <Route exact path="/documents" component={Documents} />
-      <Route exact path="/tasks" component={Tasks} />
-      <Route exact path="/about" component={About} />
+      <Route path="/documents" component={Documents} />
+      <Route path="/tasks" component={Tasks} />
+      <Route path="/about" component={About} />
+      <Route component={NotFound} />
     </Switch>
   </main>
 )

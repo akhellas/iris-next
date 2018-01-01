@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class CreateDocument extends Component {
-    render() {
-      return (
-          <h2>Create Document</h2>
-      );
-    }
+class CreateDocument extends React.Component {
+  render() {
+    return <h2>Create Document</h2>
   }
-  
-  export default CreateDocument
+}
+
+export default CreateDocument
