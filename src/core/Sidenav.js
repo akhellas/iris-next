@@ -7,25 +7,25 @@ class Sidenav extends React.Component {
     this.state = { feature: props.feature }
   }
   render() {
-    if (!this.props.feature || !this.props.feature.sections) {
+    if (!this.props.feature || !this.props.feature.items) {
       return null
     }
-    const items = this.props.feature.sections.map((section, index) => (
+    const items = this.props.feature.items.map((section, index) => (
       <React.Fragment key={index}>
-        <p className="menu-label">{section.caption}</p>
+        <p className="menu-label">{section.name}</p>
         <ul className="menu-list">
           {section.items.map(item => (
             <NavLink
-              key={item.path}
+              key={item.url}
               activeClassName="is-active"
-              to={item.path}
+              to={item.url}
               exact={true}>
               {item.icon ? (
                 <span className="icon">
                   <i className={item.icon} />
                 </span>
               ) : null}
-              {item.caption}
+              {item.name}
             </NavLink>
           ))}
         </ul>

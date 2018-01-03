@@ -1,8 +1,24 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 
+import menu from './menu'
+
 class Nav extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { menu: menu }
+  }
   render() {
+    const features = menu.items.map(feature => (
+      <NavLink
+        key={feature.url}
+        className="navbar-item"
+        activeClassName="is-active"
+        to={feature.url}>
+        {feature.name}
+      </NavLink>
+    ))
+
     return (
       <nav className="navbar is-link is-fixed-top Nav">
         <div className="navbar-brand">
@@ -24,26 +40,7 @@ class Nav extends Component {
         </div>
         <div className="navbar-menu">
           <div className="navbar-item is-expanded" />
-          <div className="navbar-start">
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/documents">
-              Documents
-            </NavLink>
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/tasks">
-              Tasks
-            </NavLink>
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/issues">
-              Issues
-            </NavLink>
-          </div>
+          <div className="navbar-start">{features}</div>
           <div className="navbar-item is-expanded" />
           <div className="navbar-end">
             <NavLink

@@ -12,16 +12,18 @@ import menu from './core/menu'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    const name = props.location.pathname.split('/')[1]
-    const feature = menu[name]
-    this.state = { feature: feature }
+    this.state = { feature: this.getFeature(props) }
+  }
+
+  getFeature(props) {
+    const url = '/' + props.location.pathname.split('/')[1]
+    const feature = menu.items.find(item => item.url === url)
+    return feature
   }
 
   componentWillReceiveProps(nextProps) {
-    const name = nextProps.location.pathname.split('/')[1]
-    const feature = menu[name]
     this.setState({
-      feature: feature
+      feature: this.getFeature(nextProps)
     })
   }
 
