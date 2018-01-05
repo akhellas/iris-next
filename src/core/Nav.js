@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 import menu from './menu'
 
+import UserProfileButton from '../auth/UserProfileButton'
+
 class Nav extends Component {
   constructor(props) {
     super(props)
@@ -43,13 +45,7 @@ class Nav extends Component {
           <div className="navbar-start">{features}</div>
           <div className="navbar-item is-expanded" />
           <div className="navbar-end">
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/about"
-              exact={true}>
-              About
-            </NavLink>
+            <UserProfileButton />
           </div>
         </div>
       </nav>

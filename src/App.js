@@ -33,9 +33,13 @@ class App extends React.Component {
       <div className="container-fluid is-fullheight">
         <Nav />
         <div className="columns is-marginless is-fullheight">
-          <div className="column is-narrow Sidenav">
-            <Sidenav feature={feature} />
-          </div>
+          {feature &&
+            feature.items &&
+            feature.items.length > 0 && (
+              <div className="column is-narrow Sidenav">
+                <Sidenav feature={feature} />
+              </div>
+            )}
           <div className="column is-paddingless">
             <Main />
           </div>
